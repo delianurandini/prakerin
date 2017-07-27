@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>guru</title>
+	<title>halaman about 3</title>
 </head>
 <body>
-GURU
+	Halaman About 3!!
 </body>
 </html>

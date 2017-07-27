@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>prakerinsekolah</title>
+	<title>halaman about 1</title>
 </head>
 <body>
-
+	Halaman About 1!!
 </body>
 </html>
