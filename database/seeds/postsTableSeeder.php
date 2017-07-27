@@ -19,4 +19,4 @@ class postsTableSeeder extends Seeder
         // memasukan data ke table 'posts' di database
         DB::table('posts')->insert($posts);
     }
-}
+} 
