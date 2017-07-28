@@ -16,13 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function(){
-	return '<h1>Halo</h1>'
-	.'Selamat datang di webapp saya<br>'
-	.'laravel, emang keren.';
-});
-
-Route::get('latihan', function () {
-    return view('about');
+	return view('about');
 });
 
 Route::get('/about/1', function () {
@@ -46,6 +40,39 @@ Route::get('/siswa/{nama}/{sekolah}/{umur}', function ($a,$b,$c) {
 
 Route::get('/nama/{halaman}', function ()  {
    	$a='john';
-   return 'Ini Halaman About '.$a;
-       
+   return 'Ini Halaman About '.$a;   
+});
+
+Route::get('testmodel', function(){
+    $a = App\post::all();
+    return $a;
+});
+
+Route::get('id', function(){
+    $b=App\post::find(1);
+    return $b;
+});
+
+Route::get('title', function(){
+    $c=App\post::where('title','like','cepat nikah')->get();
+    return $c;
+});
+
+Route::get('ubah', function(){
+    $post=App\post::find(1);
+    $post ->title = "Ciri Keluarga Sakinah";
+    $post->save();
+    return $post;
+});
+
+Route::get('tambah', function(){
+    $post = new App\post;
+    $post->title="7 amalan pembuka jodoh";
+    $post->content="shalat malam, sedekah, puasa sunah, silaturahmi, senyum, doa, tobat";
+    $post->save();
+    return $post;
+});
+
+Route::get('cektampilan', function(){
+    return view('layouts.master');
 });
