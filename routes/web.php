@@ -76,3 +76,26 @@ Route::get('tambah', function(){
 Route::get('cektampilan', function(){
     return view('layouts.master');
 });
+
+Route::get('/halo', function(){
+    return view('index');
+});
+
+Route::get('/orangtua', function(){
+    $ortu = App\orangtua::all();
+    foreach ($ortu as $key) {
+        echo $key->nama_ayah;
+        echo " dengan ";
+        echo $key->nama_ibu;
+        echo " mempunyai anak ";
+        foreach ($key->siswa as $data) {
+            echo "<li>".$data->nama."</li>";
+            echo "<hr>";
+        }
+    }
+});
+
+Route::get('/index', 'mycontroller@index');
+Route::get('/index2', 'mycontroller@tampilmodel');
+Route::get('/index3', 'mycontroller@tampilview');
+Route::get('/index4', 'mycontroller@percobaan');
