@@ -101,3 +101,4 @@ Route::get('/index3', 'mycontroller@tampilview');
 Route::get('/index4', 'mycontroller@percobaan');
 
 Route::resource('orangtua', 'OrangtuaController');
+Route::resource('murid', 'MuridController');
